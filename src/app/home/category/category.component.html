@@ -1,0 +1,47 @@
+<!--CATEGORY-->
+<ng-container>
+  <div *ngIf="!selectedCategory?.title" class="d-flex flex-wrap font-weight-bold mb-2 text-white">
+    <div *ngFor="let category of categoryData" (click)="CategorySelectedEvent(category.id)"
+         class="btn rounded-0 font-weight-bold p-2 bg-info flex-fill text-center mr-2">
+      <span>
+        {{category?.title}}
+      </span>
+    </div>
+  </div>
+  <div *ngIf="selectedCategory?.title" class="d-flex flex-wrap mt-2 font-weight-bold">
+    <div class="p-2 bg-info flex-fill text-center text-white">
+      {{selectedCategory?.title}}
+    </div>
+
+    <button (click)="CategorySelectedEvent()" type="button" class="btn btn-info rounded-0">
+      <i class="close text-white">&times;</i>
+    </button>
+  </div>
+</ng-container>
+
+<div *ngIf="selectedCategory?.title" class="jumbotron text-center">
+  <h1>{{selectedCategory.title}}</h1>
+  <p>{{selectedCategory.description}}</p>
+
+  <!--SUBCATEGORY-->
+  <ng-container>
+    <div *ngIf="!selectedSubCategory?.title" class="d-flex text-white font-weight-bold justify-content-center">
+      <button (click)="SubCategorySelectedEvent(subCategory.id)" *ngFor="let subCategory of selectedCategory?.subCategories"
+              class="btn btn-info mr-2 ml-2 mb-2 rounded-0">
+        {{subCategory.title}}
+      </button>
+    </div>
+    <div *ngIf="selectedSubCategory?.title" class="d-flex flex-wrap mt-2 font-weight-bold">
+      <div class="p-2 bg-info flex-fill text-center text-white">
+        {{selectedSubCategory?.title}}
+      </div>
+
+      <button (click)="SubCategorySelectedEvent()" type="button" class="btn btn-info rounded-0">
+        <i class="close text-white">&times;</i>
+      </button>
+    </div>
+
+    <br />
+    <app-sub-category *ngIf="selectedSubCategory?.title" [subCategory]="selectedSubCategory"></app-sub-category>
+  </ng-container>
+</div>
