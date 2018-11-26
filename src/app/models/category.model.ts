@@ -62,6 +62,7 @@ export class StubModel {
     categoryFifa.id = '0';
     categoryFifa.description = 'Every FIFA Soundtrack Song EVER';
     categoryFifa.title = 'FIFA';
+    categoryFifa.imageUrl = 'https://upload.wikimedia.org/wikipedia/en/f/ff/FIFA_World_Version_8_title_screen.jpg';
     categoryFifa.subCategories.push(year2017);
     categoryFifa.subCategories.push(year2018);
 
@@ -69,6 +70,7 @@ export class StubModel {
     categoryPinkFloyd.id = '1';
     categoryPinkFloyd.description = 'Every PINK FLOYD Song EVER';
     categoryPinkFloyd.title = 'PINK FLOYD';
+    categoryPinkFloyd.imageUrl = 'https://i.pinimg.com/originals/f3/0c/5d/f30c5d0a977c26611216cf44719b4320.jpg';
     categoryPinkFloyd.subCategories.push(year2017);
     categoryPinkFloyd.subCategories.push(year2018);
 

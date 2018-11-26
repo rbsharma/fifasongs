@@ -4,15 +4,18 @@ import { NgModule } from '@angular/core';
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { StaticOverviewComponent } from './static-overview/static-overview.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    StaticOverviewComponent
+    StaticOverviewComponent,
+    
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule
   ],
   providers: [],
   exports: [
