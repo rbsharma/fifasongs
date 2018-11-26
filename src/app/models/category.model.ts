@@ -69,7 +69,7 @@ export class StubModel {
     let categoryPinkFloyd = new InterestCategoryModel();
     categoryPinkFloyd.id = '1';
     categoryPinkFloyd.description = 'Every PINK FLOYD Song EVER';
-    categoryPinkFloyd.title = 'PINK FLOYD';
+    categoryPinkFloyd.title = 'PINK_FLOYD';
     categoryPinkFloyd.imageUrl = 'https://i.pinimg.com/originals/f3/0c/5d/f30c5d0a977c26611216cf44719b4320.jpg';
     categoryPinkFloyd.subCategories.push(year2017);
     categoryPinkFloyd.subCategories.push(year2018);

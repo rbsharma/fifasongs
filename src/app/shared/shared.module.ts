@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { StaticOverviewComponent } from './static-overview/static-overview.component';
+import { CategoryOverviewComponent } from './category-overview/category-overview.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -11,17 +12,17 @@ import { RouterModule } from '@angular/router';
     HeaderComponent,
     FooterComponent,
     StaticOverviewComponent,
-    
+    CategoryOverviewComponent
   ],
   imports: [
-    BrowserModule,
     RouterModule
   ],
   providers: [],
   exports: [
     HeaderComponent,
     FooterComponent,
-    StaticOverviewComponent
+    StaticOverviewComponent,
+    CategoryOverviewComponent
   ]
 })
 export class SharedModule { }
